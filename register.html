@@ -3,13 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Login - Online Bookstore</title>
+    <title>Register - Online Bookstore</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <header>
       <h1>Online Bookstore</h1>
-      <p>Login to your account</p>
+      <p>Create your account</p>
 
       <nav>
         <a href="index.html">Home</a>
@@ -21,10 +21,18 @@
     </header>
 
     <main>
-      <section class="login-section">
-        <h2>Login</h2>
+      <section class="register-section">
+        <h2>Register</h2>
 
         <form>
+          <label for="fullname">Full Name</label>
+          <input
+            id="fullname"
+            type="text"
+            placeholder="Enter your full name"
+            required
+          />
+
           <label for="email">Email</label>
           <input
             id="email"
@@ -32,6 +40,7 @@
             placeholder="Enter your email"
             required
           />
+
           <label for="password">Password</label>
           <input
             id="password"
@@ -40,10 +49,18 @@
             required
           />
 
-          <button type="submit">Login</button>
+          <label for="confirm-password">Confirm Password</label>
+          <input
+            id="confirm-password"
+            type="password"
+            placeholder="Confirm your password"
+            required
+          />
+
+          <button type="submit">Register</button>
         </form>
-        <p class="login-note">Don't have an account? Register here.</p>
-        <p><a href="index.html">Back to Home</a></p>
+        <p class="login-note">Already have an account? Login here.</p>
+        <p><a href="login.html">Back to Login</a></p>
       </section>
     </main>
 
