@@ -4,37 +4,58 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Online Bookstore</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <header>
       <h1>Online Bookstore</h1>
       <p>Welcome to our online bookstore.</p>
+
+      <nav>
+        <a href="#">Home</a>
+        <a href="#">Books</a>
+        <a href="#">Login</a>
+        <a href="#">Register</a>
+        <a href="#">Contact</a>
+      </nav>
     </header>
     <main>
-      <h2>Featured Books</h2>
-      <p>Here you can find some of our popular books.</p>
-      <button>View Books</button>
+      <section class="hero-section">
+        <h2>Find Your Next Favorite Book</h2>
+        <p>Browse books, search by title, and discover popular books.</p>
+        <button>Shop Now</button>
+      </section>
 
-      <div class="book-list">
-        <section>
-          <h3>Book 1</h3>
-          <p>Author: John Smith</p>
-          <p>Price: $19.99</p>
-        </section>
+      <section class="search-section">
+        <h2>Search Books</h2>
+        <input type="text" placeholder="Search for a book" />
+        <button>Search</button>
+      </section>
 
-        <section>
-          <h3>Book 2</h3>
-          <p>Author: Jane Doe</p>
-          <p>Price: $24.99</p>
-        </section>
+      <section class="featured-section">
+        <h2>Featured Books</h2>
+        <p>Here you can find some of our popular books.</p>
 
-        <section>
-          <h3>Book 3</h3>
-          <p>Author: Mark Lee</p>
-          <p>Price: $18.50</p>
-        </section>
-      </div>
+        <div class="book-list">
+          <div class="book-card">
+            <h3>Book 1</h3>
+            <p>Author: John Smith</p>
+            <p>Price: $19.99</p>
+          </div>
+
+          <div class="book-card">
+            <h3>Book 2</h3>
+            <p>Author: Jane Doe</p>
+            <p>Price: $24.99</p>
+          </div>
+
+          <div class="book-card">
+            <h3>Book 3</h3>
+            <p>Author: Mark Lee</p>
+            <p>Price: $18.50</p>
+          </div>
+        </div>
+      </section>
     </main>
     <footer>
       <p>Online Bookstore - 2026</p>
