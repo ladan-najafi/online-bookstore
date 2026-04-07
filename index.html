@@ -64,7 +64,23 @@
       <div class="container">
         <h2 class="text-center mb-4">Featured Books</h2>
 
+        <!-- Search Books -->
+        <div class="row justify-content-center mb-4">
+          <div class="col-md-6">
+            <input
+              type="text"
+              id="search-input"
+              class="form-control"
+              placeholder="Search for a book"
+            />
+          </div>
+          <div class="col-md-2 mt-3 mt-md-0">
+            <button id="search-btn" class="btn btn-dark w-100">Search</button>
+          </div>
+        </div>
+
         <div class="row g-4">
+          <!-- Book 1 -->
           <div class="col-md-4">
             <div class="card h-100">
               <img
@@ -75,13 +91,17 @@
               <div class="card-body">
                 <h5 class="card-title">Java Basics</h5>
                 <p class="card-text">A simple book for learning Java.</p>
-                <a href="#" class="btn btn-primary view-btn" data-book="java"
-                  >View</a
-                >
+                <a href="#" class="btn btn-primary view-btn" data-book="java">
+                  View
+                </a>
+                <button class="btn btn-success cart-btn" data-book="java">
+                  Add to Cart
+                </button>
               </div>
             </div>
           </div>
 
+          <!-- Book 2 -->
           <div class="col-md-4">
             <div class="card h-100">
               <img
@@ -92,13 +112,17 @@
               <div class="card-body">
                 <h5 class="card-title">HTML and CSS</h5>
                 <p class="card-text">A beginner guide for web design.</p>
-                <a href="#" class="btn btn-primary view-btn" data-book="html"
-                  >View</a
-                >
+                <a href="#" class="btn btn-primary view-btn" data-book="html">
+                  View
+                </a>
+                <button class="btn btn-success cart-btn" data-book="html">
+                  Add to Cart
+                </button>
               </div>
             </div>
           </div>
 
+          <!-- Book 3 -->
           <div class="col-md-4">
             <div class="card h-100">
               <img
@@ -113,14 +137,20 @@
                   href="#"
                   class="btn btn-primary view-btn"
                   data-book="database"
-                  >View</a
                 >
+                  View
+                </a>
+                <button class="btn btn-success cart-btn" data-book="database">
+                  Add to Cart
+                </button>
               </div>
             </div>
           </div>
         </div>
       </div>
     </section>
+
+    <!-- Book Details -->
     <section id="details" class="py-5 bg-light">
       <div class="container">
         <h2 class="text-center mb-4">Book Details</h2>
@@ -131,8 +161,6 @@
         </div>
       </div>
     </section>
-
-    
 
     <!-- Contact -->
     <section id="contact" class="py-5 bg-light">
