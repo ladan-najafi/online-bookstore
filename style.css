@@ -6,3 +6,26 @@ body {
   height: 250px;
   object-fit: cover;
 }
+html {
+  scroll-padding-top: 70px;
+}
+
+
+#backToTop {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: #343a40;
+  color: white;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 50%;
+  font-size: 18px;
+  cursor: pointer;
+  display: none;
+  z-index: 999;
+}
+
+#backToTop:hover {
+  background-color: #007bff;
+}

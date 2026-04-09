@@ -40,13 +40,13 @@ function showBookDetails(bookName) {
 buttons.forEach((button) => {
   button.addEventListener('click', (event) => {
     event.preventDefault();
-
     const bookName = button.dataset.book;
     showBookDetails(bookName);
+    document.getElementById('details').scrollIntoView({ behavior: 'smooth' });
   });
 });
 
-cartButtons.forEach((button) => {
+/*cartButtons.forEach((button) => {
   button.addEventListener('click', () => {
     const bookName = button.dataset.book;
 
@@ -58,7 +58,41 @@ cartButtons.forEach((button) => {
       alert('Database Concepts added to cart!');
     }
   });
+});*/
+// ---- CART CODE STARTS HERE ----
+
+let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+function updateCartCount() {
+  const countEl = document.getElementById('cart-count');
+  if (countEl) countEl.textContent = cart.length;
+}
+
+updateCartCount();
+
+const bookData = {
+  java:     { title: 'Java Basics',       author: 'John Smith',    price: 29.99 },
+  html:     { title: 'HTML and CSS',      author: 'Sarah Johnson', price: 24.99 },
+  database: { title: 'Database Concepts', author: 'Michael Brown', price: 34.99 }
+};
+
+cartButtons.forEach((button) => {
+  button.addEventListener('click', () => {
+    const bookName = button.dataset.book;
+    const book = bookData[bookName];
+
+    cart.push(book);
+    localStorage.setItem('cart', JSON.stringify(cart));
+    updateCartCount();
+
+    if (confirm(`${book.title} added to cart! Go to cart?`)) {
+      window.location.href = 'cart.html';
+    }
+  });
 });
+
+// ---- CART CODE ENDS HERE ----
+
 
 searchBtn.addEventListener('click', () => {
   const searchValue = searchInput.value.toLowerCase();
