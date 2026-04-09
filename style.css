@@ -2,9 +2,15 @@ body {
   scroll-behavior: smooth;
 }
 
-.card-img-top {
+/*.card-img-top {
   height: 250px;
   object-fit: cover;
+}*/
+.card-img-top {
+  height: 200px;
+  object-fit: contain;
+  background-color: #f8f9fa;
+  padding: 10px;
 }
 html {
   scroll-padding-top: 70px;
